@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About the Text Miner Application</title>
+    <style>
+        /* Custom CSS for a professional look */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            color: #4A90E2;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 1.2em;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #4A90E2;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #357ABD;
+        }
+        .button-secondary {
+            background-color: #757575;
+        }
+        .button-secondary:hover {
+            background-color: #5a5a5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About the Text Miner Application</h1>
+        <p>The Text Miner Application is an advanced tool designed to process large volumes of documents to 
+           uncover structured insights and best practices. Utilizing natural language processing (NLP), it 
+           reads and analyzes documents to extract critical information, compartmentalize sections, and 
+           identify key insights. This structured data is then transformed into embeddings and stored in a 
+           vector database, enabling rapid retrieval for various use cases, from internal knowledge management 
+           to supporting AI-driven projects.</p>
+        
+        <p>With a focus on accuracy and consistency, the application ensures that extracted best practices 
+           reflect a high standard of clarity and objectivity. The output is provided in a machine-readable 
+           format, such as JSON, optimized for integration into AI models and knowledge-based systems.</p>
+
+        <p>Key features include:</p>
+        <ul>
+            <li><strong>Document Upload:</strong> Seamlessly upload multiple documents for bulk processing.</li>
+            <li><strong>NLP-Driven Analysis:</strong> Automatically identifies and extracts best practices, strategies, 
+                and guiding principles from the content.</li>
+            <li><strong>Embedding and Storage:</strong> Generates vector embeddings and stores them in a scalable 
+                vector database for quick access.</li>
+            <li><strong>Structured Output:</strong> Provides results in a structured format compatible with 
+                AI systems and future NLP tasks.</li>
+        </ul>
+
+        <div class="button-container">
+            <a href="{{ url_for('routes.upload_files') }}" class="button">Upload Document</a>
+            <a href="{{ url_for('home') }}" class="button button-secondary">Home</a>
+        </div>
+    </div>
+</body>
+</html>

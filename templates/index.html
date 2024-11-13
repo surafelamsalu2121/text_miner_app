@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Upload Your Documents</h2>
+    <p class="mb-2 text-gray-600">Choose one or more documents to process for best practice extraction.</p>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="space-y-4">
+        <input type="file" name="document" class="w-full border-2 border-gray-300 rounded p-2" multiple required>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Upload Documents
+        </button>
+    </form>
+</div>
+{% endblock %}

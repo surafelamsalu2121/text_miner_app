@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processed Results</title>
+    <style>
+        .result-container {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .summary {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processed Results</h1>
+    {% for result in results %}
+        <div class="result-container">
+            <h2>File: {{ result.filename }}</h2>
+            <p class="summary">{{ result.summary }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

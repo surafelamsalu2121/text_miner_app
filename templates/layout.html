@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Miner Application</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Use CDN for Tailwind CSS -->
+
+        <script src="/static/js/alpine.min.js" defer></script> <!-- Optional -->
+    </head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-blue-600 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-semibold">Text Miner App</h1>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="text-white hover:text-gray-300">Home</a></li>
+                <li><a href="/results" class="text-white hover:text-gray-300">Results</a></li>
+                <li><a href="/about" class="text-white hover:text-gray-300">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto mt-8">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
